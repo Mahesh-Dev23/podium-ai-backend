@@ -11,9 +11,10 @@ const connectDB = require('./config/db')
 const app = express()
 
  app.use(cors({
-    origin:"*",
-    methods:['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true
+    'origin':"*",
+    'methods':['GET', 'POST', 'PUT', 'DELETE'],
+    'credentials': true,
+    'Content-Type': 'application/json'
  }))
  app.use(express.json())
  app.use(express.urlencoded({extended:false}))
