@@ -19,7 +19,7 @@ const app = express()
  app.use(express.json())
  app.use(express.urlencoded({extended:false}))
 
- app.get('/',(req, res)=> {
+ app.get('/', cors(), ( req, res)=> {
     res.json('Welcome to "Podium-AI-Backend App!')
     console.log('Welcome to "Podium-AI-Backend App!')
     })
